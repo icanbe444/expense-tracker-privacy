@@ -1,0 +1,217 @@
+<title>Privacy Policy</title>
+<meta name="description" content="How Expense Tracker collects, stores and protects your data." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #faf9f7;
+    --surface: #ffffff;
+    --ink: #1c1a22;
+    --ink-dim: #55505f;
+    --line: #e5e1e8;
+    --accent: #4b3fc4;
+    --accent-soft: #efedfb;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17151c;
+      --surface: #201d27;
+      --ink: #f3f1f6;
+      --ink-dim: #b0abc0;
+      --line: #34303f;
+      --accent: #9d94ef;
+      --accent-soft: #2a2540;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17151c;
+    --surface: #201d27;
+    --ink: #f3f1f6;
+    --ink-dim: #b0abc0;
+    --line: #34303f;
+    --accent: #9d94ef;
+    --accent-soft: #2a2540;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    padding-inline: 20px;
+    padding-block: 48px 64px;
+  }
+  main {
+    max-width: 700px;
+    margin-inline: auto;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  .mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #6d6ce8, #4b3fc4 55%, #3a2f9e);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .mark svg { width: 20px; height: 20px; }
+  header .name { font-family: var(--serif); font-weight: 600; font-size: 19px; }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(32px, 6vw, 44px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 18px 0 6px;
+  }
+  .updated {
+    color: var(--ink-dim);
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 40px;
+  }
+  .lede {
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 44px;
+  }
+  section { margin-bottom: 36px; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 22px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  h2 .n {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: 2px 7px;
+    font-variant-numeric: tabular-nums;
+  }
+  p { margin: 0 0 12px; color: var(--ink); }
+  p.dim { color: var(--ink-dim); }
+  ul { margin: 0 0 12px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 600; }
+  a { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); text-underline-offset: 2px; }
+  .box {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 10px 0 12px;
+  }
+  .box p:last-child { margin-bottom: 0; }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--ink-dim);
+    font-size: 14px;
+  }
+  footer a { color: var(--ink-dim); }
+</style>
+
+<main>
+  <header>
+    <div class="mark">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 8.5C4 6.567 5.567 5 7.5 5h9A2.5 2.5 0 0 1 19 7.5V8H7a1 1 0 0 0 0 2h11.5A1.5 1.5 0 0 1 20 11.5v6a2.5 2.5 0 0 1-2.5 2.5h-10A3.5 3.5 0 0 1 4 16.5v-8Z" fill="#fff"/>
+        <circle cx="16.2" cy="14.5" r="1.5" fill="#4b3fc4"/>
+      </svg>
+    </div>
+    <span class="name">Expense Tracker</span>
+  </header>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated 25 September 2026</p>
+
+  <p class="lede">Expense Tracker is a personal finance app: you record and review your own income, spending, budgets and savings goals. This page explains, in plain terms, what data the app collects, where it lives, and how you can remove it.</p>
+
+  <section>
+    <h2><span class="n">1</span> Who we are</h2>
+    <p>Expense Tracker is developed by an independent developer, contactable at <a href="mailto:icanbe444@gmail.com">icanbe444@gmail.com</a>. This policy covers the Expense Tracker mobile app on iOS and Android.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">2</span> What we collect</h2>
+    <p>Everything the app stores is either your account credential or data you type in yourself:</p>
+    <ul>
+      <li><strong>Account:</strong> your email address, and a password you set (we never see or store the password itself — it's handled by our authentication provider's own secure sign-in flow).</li>
+      <li><strong>Financial data you enter:</strong> transactions (amount, description, date, category, notes, tags), accounts and their balances, budgets, recurring bills and income, savings goals and contributions, and any CSV bank statement you choose to import.</li>
+    </ul>
+    <div class="box">
+      <p><strong>We do not currently connect to your bank.</strong> Expense Tracker does not read your accounts automatically and never asks for your online banking password. If open banking support is added in future, this policy will be updated first, and it will only ever run with your explicit, separate consent.</p>
+    </div>
+    <p class="dim">We don't collect analytics, advertising identifiers, location, camera, contacts or microphone data, and this app carries no third-party advertising or tracking SDKs.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">3</span> How we use it</h2>
+    <p>Solely to run the app for you: to show your balance, categorise and total your spending, calculate budgets, and track goals and recurring items. We do not use your financial data for advertising, and we do not sell it.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">4</span> Where it's stored, and how it's protected</h2>
+    <p>Your data is stored with Supabase, a database and authentication provider, in their <strong>UK (London)</strong> data region. Supabase acts as our data processor — they host the infrastructure, they don't use your data for their own purposes.</p>
+    <ul>
+      <li>Connections between the app and the database are encrypted in transit (HTTPS/TLS), and data at rest is encrypted by Supabase's infrastructure.</li>
+      <li>On your device, your sign-in session is separately encrypted (AES-256) with the key held in your phone's own secure hardware storage (iOS Keychain or Android Keystore) — not just saved as plain text.</li>
+      <li>The database enforces row-level security: every query is scoped to your account at the database layer, so one user's data is never reachable through another user's session, even in the event of an application bug.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">5</span> Sharing</h2>
+    <p>We don't sell your data or share it with advertisers or data brokers. It's shared only with Supabase, strictly as our infrastructure provider, and only as needed to run the app.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">6</span> Keeping and deleting your data</h2>
+    <p>We keep your data for as long as your account exists. You can permanently delete your account and everything in it at any time, from inside the app: <strong>Settings → Delete account</strong>. This removes your data immediately and cannot be undone. You can also request deletion by emailing us.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">7</span> Your rights</h2>
+    <p>Under UK GDPR, you can ask us to let you access, correct, delete, or export a copy of your data, or to explain how it's used. Account deletion is self-service in the app; for anything else, email <a href="mailto:icanbe444@gmail.com">icanbe444@gmail.com</a> and we'll respond within a reasonable time. If you're unsatisfied with our response, you can complain to the UK Information Commissioner's Office (ico.org.uk).</p>
+  </section>
+
+  <section>
+    <h2><span class="n">8</span> Children</h2>
+    <p>Expense Tracker is not directed at, and is not knowingly used by, children under 13. We don't knowingly collect data from children.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">9</span> Changes to this policy</h2>
+    <p>If this policy changes, we'll update the date at the top of this page. Continuing to use the app after a change means you accept the update.</p>
+  </section>
+
+  <footer>
+    Questions about this policy or your data? Email <a href="mailto:icanbe444@gmail.com">icanbe444@gmail.com</a>.
+  </footer>
+</main>
