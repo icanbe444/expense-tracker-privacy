@@ -1,0 +1,178 @@
+<title>Email confirmed</title>
+<meta name="description" content="Your Expense Tracker email address is confirmed." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #faf9f7;
+    --surface: #ffffff;
+    --ink: #1c1a22;
+    --ink-dim: #55505f;
+    --line: #e5e1e8;
+    --accent: #4b3fc4;
+    --accent-soft: #efedfb;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17151c;
+      --surface: #201d27;
+      --ink: #f3f1f6;
+      --ink-dim: #b0abc0;
+      --line: #34303f;
+      --accent: #9d94ef;
+      --accent-soft: #2a2540;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17151c;
+    --surface: #201d27;
+    --ink: #f3f1f6;
+    --ink-dim: #b0abc0;
+    --line: #34303f;
+    --accent: #9d94ef;
+    --accent-soft: #2a2540;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    padding-inline: 20px;
+    padding-block: 48px 64px;
+  }
+  main {
+    max-width: 700px;
+    margin-inline: auto;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  .mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #6d6ce8, #4b3fc4 55%, #3a2f9e);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .mark svg { width: 20px; height: 20px; }
+  header .name { font-family: var(--serif); font-weight: 600; font-size: 19px; }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(32px, 6vw, 44px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 18px 0 6px;
+  }
+  .updated {
+    color: var(--ink-dim);
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 40px;
+  }
+  .lede {
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 44px;
+  }
+  section { margin-bottom: 36px; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 22px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  h2 .n {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: 2px 7px;
+    font-variant-numeric: tabular-nums;
+  }
+  p { margin: 0 0 12px; color: var(--ink); }
+  p.dim { color: var(--ink-dim); }
+  ul { margin: 0 0 12px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 600; }
+  a { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); text-underline-offset: 2px; }
+  .box {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 10px 0 12px;
+  }
+  .box p:last-child { margin-bottom: 0; }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--ink-dim);
+    font-size: 14px;
+  }
+  footer a { color: var(--ink-dim); }
+  .btn { display: inline-block; background: var(--accent); color: #fff; padding: 12px 22px; border-radius: 10px; font-weight: 600; text-decoration: none; margin-top: 4px; }
+  [hidden] { display: none !important; }
+</style>
+
+<main>
+  <header>
+    <div class="mark">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 8.5C4 6.567 5.567 5 7.5 5h9A2.5 2.5 0 0 1 19 7.5V8H7a1 1 0 0 0 0 2h11.5A1.5 1.5 0 0 1 20 11.5v6a2.5 2.5 0 0 1-2.5 2.5h-10A3.5 3.5 0 0 1 4 16.5v-8Z" fill="#fff"/>
+        <circle cx="16.2" cy="14.5" r="1.5" fill="#4b3fc4"/>
+      </svg>
+    </div>
+    <span class="name">Expense Tracker</span>
+  </header>
+
+  <div id="ok">
+    <h1>Email confirmed</h1>
+    <p class="lede">Thanks, your email address is verified and your account is ready. Open the Expense Tracker app and sign in with your email and password.</p>
+    <p><a class="btn" href="expensetracker://">Open the app</a></p>
+    <p class="dim">If the button does nothing, just open Expense Tracker from your home screen.</p>
+  </div>
+
+  <div id="bad" hidden>
+    <h1>This link has expired</h1>
+    <p class="lede">The confirmation link is no longer valid, or was already used. If you already confirmed your email, open the app and sign in. If not, open the app, create your account again, and we will send a fresh link.</p>
+    <p><a class="btn" href="expensetracker://">Open the app</a></p>
+  </div>
+
+  <footer>
+    Questions? Email <a href="mailto:icanbe444@gmail.com">icanbe444@gmail.com</a>.
+  </footer>
+</main>
+
+<script>
+  var h = new URLSearchParams(location.hash.slice(1) + '&' + location.search.slice(1));
+  if (h.get('error') || h.get('error_code')) {
+    document.getElementById('ok').hidden = true;
+    document.getElementById('bad').hidden = false;
+  }
+</script>
+</body></html>
