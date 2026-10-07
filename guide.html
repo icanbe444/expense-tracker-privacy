@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How to use Expense Tracker</title>
+<meta name="description" content="A short, plain guide to every feature in Expense Tracker." />
+<meta name="google-site-verification" content="DC-KmrHhNBWa4T2iNH_et-xEPYB4aIfWleBjAIxnsx4" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #faf9f7;
+    --surface: #ffffff;
+    --ink: #1c1a22;
+    --ink-dim: #55505f;
+    --line: #e5e1e8;
+    --accent: #4b3fc4;
+    --accent-soft: #efedfb;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17151c;
+      --surface: #201d27;
+      --ink: #f3f1f6;
+      --ink-dim: #b0abc0;
+      --line: #34303f;
+      --accent: #9d94ef;
+      --accent-soft: #2a2540;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17151c;
+    --surface: #201d27;
+    --ink: #f3f1f6;
+    --ink-dim: #b0abc0;
+    --line: #34303f;
+    --accent: #9d94ef;
+    --accent-soft: #2a2540;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    padding-inline: 20px;
+    padding-block: 48px 64px;
+  }
+  main {
+    max-width: 700px;
+    margin-inline: auto;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  .mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #6d6ce8, #4b3fc4 55%, #3a2f9e);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .mark svg { width: 20px; height: 20px; }
+  header .name { font-family: var(--serif); font-weight: 600; font-size: 19px; }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(32px, 6vw, 44px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 18px 0 6px;
+  }
+  .updated {
+    color: var(--ink-dim);
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 40px;
+  }
+  .lede {
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 44px;
+  }
+  section { margin-bottom: 36px; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 22px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  h2 .n {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: 2px 7px;
+    font-variant-numeric: tabular-nums;
+  }
+  p { margin: 0 0 12px; color: var(--ink); }
+  p.dim { color: var(--ink-dim); }
+  ul { margin: 0 0 12px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 600; }
+  a { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); text-underline-offset: 2px; }
+  .box {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 10px 0 12px;
+  }
+  .box p:last-child { margin-bottom: 0; }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--ink-dim);
+    font-size: 14px;
+  }
+  footer a { color: var(--ink-dim); }
+</style>
+
+</head>
+<body>
+<main>
+  <header>
+    <div class="mark">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 8.5C4 6.567 5.567 5 7.5 5h9A2.5 2.5 0 0 1 19 7.5V8H7a1 1 0 0 0 0 2h11.5A1.5 1.5 0 0 1 20 11.5v6a2.5 2.5 0 0 1-2.5 2.5h-10A3.5 3.5 0 0 1 4 16.5v-8Z" fill="#fff"/>
+        <circle cx="16.2" cy="14.5" r="1.5" fill="#4b3fc4"/>
+      </svg>
+    </div>
+    <span class="name">Expense Tracker</span>
+  </header>
+
+  <h1>How to use Expense Tracker</h1>
+  <p class="updated">A quick guide to every feature</p>
+
+  <section>
+    <h2><span class="n">1</span> Get started</h2>
+    <ul>
+      <li>Tap Create account. Enter your name (optional), your email twice, and a password twice. The eye icon shows what you typed.</li>
+      <li>Check your email (and spam) for the confirmation link, tap it, then come back and sign in. Or tap Continue with Google to skip that.</li>
+      <li>Pick your currency (£, $ or ₦). You can change it later in Settings.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">2</span> The five tabs</h2>
+    <ul>
+      <li>Home: your total balance, this month's income and spending, bills coming up this week, and where your money went. Tap + Add to record something. Pull down to refresh.</li>
+      <li>Transactions: every entry, newest first. Tap one to edit it, press and hold to delete it, and tap a tag at the top to filter. Import is for bank files.</li>
+      <li>Budgets: type a monthly amount next to a category. It carries forward each month until you change it.</li>
+      <li>Reports: choose This month, Last 3 months or Last 12 months to see income versus spending, your savings rate and spending by category.</li>
+      <li>Settings: your account, currency and everything below.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">3</span> Add a transaction</h2>
+    <ul>
+      <li>Tap + Add and choose Expense or Income.</li>
+      <li>Type the amount and a description. The category may fill in by itself.</li>
+      <li>Pick the date, the account and a category. For one purchase that covers several things, tap Split into categories.</li>
+      <li>Optionally add tags and notes, then tap Save.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">4</span> Import from your bank</h2>
+    <ul>
+      <li>Download a CSV from your bank's app or website. In Transactions, tap Import, pick the file, check the preview and tap Import.</li>
+      <li>If your credit card shows spending as positive numbers, switch on that option before importing.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">5</span> Settings, one by one</h2>
+    <ul>
+      <li>Account: change your name. Your email is shown above it.</li>
+      <li>Currency: switch between £, $ and ₦. Only the symbol changes; amounts are not converted.</li>
+      <li>Accounts: add accounts such as Joint savings, with an opening balance. Archiving hides one without losing its history.</li>
+      <li>Recurring: add bills and subscriptions such as Netflix or rent. The app also suggests ones it spots.</li>
+      <li>Goals: create a savings goal with a target, then tap it to Add or Withdraw money.</li>
+      <li>Categories: add your own, or press and hold one to delete it.</li>
+      <li>Category rules: teach the app that, for example, tesco means Groceries, so future entries are sorted automatically.</li>
+      <li>Sign out, or Delete account. Deleting removes your account and all its data permanently.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">6</span> Tips</h2>
+    <ul>
+      <li>Set budgets first, add transactions as you spend, and check Reports at the end of the month.</li>
+    </ul>
+  </section>
+
+  <footer>
+    Questions? Email <a href="mailto:icanbe444@gmail.com">icanbe444@gmail.com</a>. &middot; <a href="privacy.html">Privacy policy</a>
+  </footer>
+</main>
+</body>
+</html>
